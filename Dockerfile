@@ -12,4 +12,4 @@ RUN git clone https://github.com/chienchi/FaQCs && \
 RUN ln -s /home/nijntje/repos/FaQCs/FaQCs.pl /usr/local/bin/FaQCs
 
 USER nijntje
-ENV ["bash"]
+CMD ["bash"]
