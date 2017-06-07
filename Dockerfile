@@ -12,8 +12,8 @@ RUN yes | cpan App::cpanminus && \
     cpanm Parallel::ForkManager && \
     cpanm String::Approx
 
-RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://github.com/sgerrand/alpine-pkg-R/releases/download/unreleased/sgerrand.rsa.pub && \
-    wget https://github.com/sgerrand/alpine-pkg-R/releases/download/unreleased/R-3.3.1-r0.apk && \
+RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://github.com/sgerrand/alpine-pkg-R/releases/download/3.3.1-r0/sgerrand.rsa.pub && \
+    wget https://github.com/sgerrand/alpine-pkg-R/releases/download/3.3.1-r0/R-3.3.1-r0.apk && \
     apk --no-cache add R-3.3.1-r0.apk
 
 RUN git clone https://github.com/inutano/FaQCs && \
