@@ -17,7 +17,7 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://github.com/sgerrand/alpine
     apk --no-cache add R-3.3.1-r0.apk
 
 RUN git clone https://github.com/inutano/FaQCs && \
-    git checkout tags/galaxy-integrated-0.1 -b galaxy-integrated-0.1 && \
+    git checkout galaxy-integrated-0.1 -b galaxy-integrated-0.1 && \
     ln -s /FaQCs/FaQCs.pl /usr/local/bin/FaQCs
 
 CMD ["bash"]
