@@ -2,7 +2,7 @@
 
 FROM alpine:3.3
 
-LABEL version: "galaxy-integrated-0.1" \
+LABEL version: "galaxy-integrated-0.2" \
       maintainer="inutano@gmail.com"
 
 WORKDIR /
@@ -19,7 +19,7 @@ RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://github.com/sgerrand/alpine
 RUN cd / && \
     git clone https://github.com/inutano/FaQCs && \
     cd FaQCs && \
-    git checkout galaxy-integrated-0.1 -b galaxy-integrated-0.1 && \
+    git checkout galaxy-integrated-0.2 -b galaxy-integrated-0.2 && \
     ln -s /FaQCs/FaQCs.pl /usr/local/bin/FaQCs
 
 CMD ["bash"]
